@@ -1,0 +1,16 @@
+
+docker pull selenium/hub:4.1.4
+docker pull selenium/node-chrome:4.1.4
+docker pull selenium/node-firefox:4.1.4
+
+/user/share/udemy/test-output
+C:/jenkinsdir/java/docker1/Project/output
+
+docker build -t='anupshaha/selenium-docker' .
+docker run -it --entrypoint=/bin/sh -v C:/jenkinsdir/java/docker1/Project/output:/user/share/udemy/test-output anupshaha/selenium-docker
+java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* -DHUB_HOST=192.168.29.190 org.testng.TestNG searchModule.xml
+docker run -d -e HUB_HOST=192.168.29.190 -e Module=searchModule.xml -v C:/jenkinsdir/java/docker1/Project/output:/user/share/udemy/test-output  anupshaha/selenium-docker
+docker run -p 8080:8080 -p 50000:50000 -v "C:\jenkins\docker\jenkins:/var/jenkins_home" jenkins/jenkins:lts
+
+
+
