@@ -20,13 +20,6 @@
             <artifactId>selenium-java</artifactId>
             <version>4.1.4</version>
         </dependency>
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-remote-driver &ndash;&gt;
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-remote-driver</artifactId>
-            <version>4.1.4</version>
-        </dependency>-->
-
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
